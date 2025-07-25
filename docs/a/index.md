@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
-  - toc
----
-
 # gggffghf
 
 !!! example "Как добавить новую строку"
@@ -17,9 +11,13 @@ hide:
     console.log(123);
     ```
 
+
+
 нужно проверить ST.
 
+
 Try ST ++ctrl+"F1"++
+
 
 ```iecst
 VAR

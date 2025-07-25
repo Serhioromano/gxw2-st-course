@@ -11,12 +11,10 @@ edit_uri: edit/main/docs/
 
 nav:
   - Главная: index.md
-  - Введение:
-      - Введение в Курс: a/index.md
-  - Часть 1: part1.md
 
 plugins:
   - search
+  - meta
   - git-authors
   - git-revision-date-localized
   - git-committers:
@@ -38,10 +36,16 @@ markdown_extensions:
       auto_append:
         - docs/includes/abbreviations.md
   - pymdownx.highlight:
-      use_pygments: true
+      use_pygments: false
   - pymdownx.tasklist:
       custom_checkbox: true
 
+extra_javascript:
+  - javascripts/hjs.js
+  - javascripts/hl.js
+
+extra_css:
+  - stylesheets/code.css
 
 extra:
   # social:
@@ -61,6 +65,7 @@ copyright: >
 theme:
   name: material
   language: ru
+  # custom_dir: material/overrides
   palette:
 
     # Palette toggle for light mode
@@ -81,9 +86,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
     - navigation.expand
     - navigation.sections
     - navigation.tracking
