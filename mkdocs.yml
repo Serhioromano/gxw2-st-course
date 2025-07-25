@@ -1,0 +1,28 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+theme:
+  name: material
+  palette:
+    scheme: default
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - navigation.expand
+    - navigation.sections
+    - navigation.tracking
+    - navigation.search.highlight
+    - navigation.search.suggestions
+    - navigation.search.share
+    - navigation.search.autocomplete
+    - navigation.search.filter
+    - navigation.search.sort
+    - navigation.search.results
+    - navigation.search.pagination
+    - navigation.search.history
+    - navigation.search.indexing
+    - navigation.search.custom
+    - navigation.search.advanced
+    - navigation.search.analytics
+    - navigation.search.debug
