@@ -17,9 +17,11 @@ nav:
 
 plugins:
   - search
-  # - git-authors
-  # - git-revision-date-localized
-  # - git-committers
+  - git-authors
+  - git-revision-date-localized
+  - git-committers:
+      repository: serhioromano/gxw2-st-course
+      branch: main
 
 markdown_extensions:
   - abbr
@@ -31,11 +33,14 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.keys
+  - def_list
   - pymdownx.snippets:
       auto_append:
         - docs/includes/abbreviations.md
   - pymdownx.highlight:
       use_pygments: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 
 extra:
@@ -84,6 +89,7 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.indexes
+    - navigation.footer
     - toc.follow
     - toc.integrate
     - search.suggest

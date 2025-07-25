@@ -5,7 +5,7 @@ serve:
 	mkdocs serve
 
 init:
-	pip3 install --upgrade pip3
+	pip install --upgrade pip
 	pip3 install mkdocs
 	pip3 install mkdocs-material
 	pip3 install mkdocs-git-authors-plugin
