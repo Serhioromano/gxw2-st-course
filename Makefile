@@ -1,6 +1,16 @@
-.PHONY: deploy init
+.PHONY: deploy init serve
+
+serve:
+	@echo "Starting the MkDocs server..."
+	mkdocs serve
 
 init:
+	pip3 install --upgrade pip3
+	pip3 install mkdocs
+	pip3 install mkdocs-material
+	pip3 install mkdocs-git-authors-plugin
+	pip3 install mkdocs-git-revision-date-localized-plugin
+	pip3 install mkdocs-git-committers-plugin
 	git config --global user.name "Serhioromano"
 	git config --global user.email "Serhioromano@outlook.com"
 

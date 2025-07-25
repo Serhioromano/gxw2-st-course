@@ -8,13 +8,14 @@
 
 	"forwardPorts": [8000],
 
-	"postCreateCommand": "mkdocs serve",
+	"postCreateCommand": "make init",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"DavidAnson.vscode-markdownlint",
 				"bierner.markdown-shiki",
-				"yzhang.markdown-all-in-one"
+				"yzhang.markdown-all-in-one",
+				"redhat.vscode-yaml"
 			]
 		}
 	}

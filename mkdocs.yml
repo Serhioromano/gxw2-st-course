@@ -1,28 +1,97 @@
-site_name: My Docs
+site_name: Курс по GX Works 2 для (FX3G, FX3U)
+site_url: https://serhioromano.github.io/gxw2-st-course/
+site_author: Сергей Романов
+site_description: >-
+  Подготовка материалов для курса по программированию ПЛК Mitsubishi серии FX.
+
+# Repository
+repo_name: serhioromano/gxw2-st-course
+repo_url: https://github.com/serhioromano/gxw2-st-course
+edit_uri: edit/main/docs/
+
 nav:
-  - Home: index.md
+  - Главная: index.md
+  - Введение:
+      - Введение в Курс: a/index.md
+  - Часть 1: part1.md
+
+plugins:
+  - search
+  # - git-authors
+  # - git-revision-date-localized
+  # - git-committers
+
+markdown_extensions:
+  - abbr
+  - tables
+  - admonition
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/abbreviations.md
+  - pymdownx.highlight:
+      use_pygments: true
+
+
+extra:
+  # social:
+  #   - icon: fontawesome/youtube
+  #     link: https://www.youtube.com/@serhioromano
+  generator: false
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+copyright: >
+  Все права защищены &copy; 2025 Сергей Романов
+
 theme:
   name: material
+  language: ru
   palette:
-    scheme: default
+
+    # Palette toggle for light mode
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
+        name: Темный режим
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/brightness-4
+        name: Светлый режим
+
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.expand
     - navigation.sections
     - navigation.tracking
-    - navigation.search.highlight
-    - navigation.search.suggestions
-    - navigation.search.share
-    - navigation.search.autocomplete
-    - navigation.search.filter
-    - navigation.search.sort
-    - navigation.search.results
-    - navigation.search.pagination
-    - navigation.search.history
-    - navigation.search.indexing
-    - navigation.search.custom
-    - navigation.search.advanced
-    - navigation.search.analytics
-    - navigation.search.debug
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tooltips
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
