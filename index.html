@@ -1,12 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ru" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Подготовка материалов для курса по программированию ПЛК Mitsubishi серии FX.">
       
+      
+        <meta name="author" content="Сергей Романов">
+      
+      
+        <link rel="canonical" href="https://serhioromano.github.io/gxw2-st-course/">
       
       
       
@@ -16,7 +22,7 @@
     
     
       
-        <title>My Docs</title>
+        <title>Курс по GX Works 2 для (FX3G, FX3U)</title>
       
     
     
@@ -42,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/code.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,6 +61,8 @@
   
   
     
+    
+      
     
     
     
@@ -67,7 +77,7 @@
       
         
         <a href="#fx-gx-works-2-structured-text" class="md-skip">
-          Skip to content
+          Перейти к содержанию
         </a>
       
     </div>
@@ -78,9 +88,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="." title="Курс по GX Works 2 для (FX3G, FX3U)" class="md-header__button md-logo" aria-label="Курс по GX Works 2 для (FX3G, FX3U)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            My Docs
+            Курс по GX Works 2 для (FX3G, FX3U)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Главная
             
           </span>
         </div>
@@ -108,7 +120,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Темный режим"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Темный режим" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлый режим"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлый режим" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -122,27 +160,34 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Поиск">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поделиться" aria-label="Поделиться" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Инициализация поиска
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -153,17 +198,23 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/serhioromano/gxw2-st-course" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    serhioromano/gxw2-st-course
+  </div>
+</a>
+      </div>
+    
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -181,7 +232,7 @@
   
     
   
-  Home
+  Главная
 
       </a>
     </li>
@@ -191,13 +242,21 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -208,16 +267,30 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href="." title="Курс по GX Works 2 для (FX3G, FX3U)" class="md-nav__button md-logo" aria-label="Курс по GX Works 2 для (FX3G, FX3U)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    My Docs
+    Курс по GX Works 2 для (FX3G, FX3U)
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/serhioromano/gxw2-st-course" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    serhioromano/gxw2-st-course
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -242,7 +315,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Главная
     
   </span>
   
@@ -255,7 +328,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Главная
     
   </span>
   
@@ -264,7 +337,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
   
   
   
@@ -273,7 +346,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -310,190 +383,238 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Список тем
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Примечания к структуре курса
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
                   
+  
 
 
 
-<h1 id="fx-gx-works-2-structured-text">Курс по программированию ПЛК серии FX в GX Works 2 на языке Structured Text</h1>
-<p>Создание обучающего курса по программированию ПЛК серии FX в GX Works 2 на языке Structured Text (ST) требует структурированного подхода, чтобы охватить ключевые аспекты от базовых до продвинутых. Ниже представлен список главных тем в оптимальной последовательности для эффективного обучения. Темы выстроены так, чтобы постепенно вводить учеников в программирование на ST, учитывая специфику ПЛК FX и GX Works 2.</p>
+  
+    <a href="https://github.com/serhioromano/gxw2-st-course/edit/main/docs/index.md" title="Редактировать страницу" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/serhioromano/gxw2-st-course/raw/main/docs/index.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="fx-gx-works-2-structured-text">Курс по программированию <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> серии <abbr title="Серия ПЛК Митсубиси">FX</abbr> в GX Works 2 на языке Structured Text</h1>
+<p>Создание обучающего курса по программированию <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> серии <abbr title="Серия ПЛК Митсубиси">FX</abbr> в GX Works 2 на языке Structured Text (<abbr title="Structured Text">ST</abbr>) требует структурированного подхода, чтобы охватить ключевые аспекты от базовых до продвинутых. Ниже представлен список главных тем в оптимальной последовательности для эффективного обучения. Темы выстроены так, чтобы постепенно вводить учеников в программирование на <abbr title="Structured Text">ST</abbr>, учитывая специфику <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> <abbr title="Серия ПЛК Митсубиси">FX</abbr> и GX Works 2.</p>
 <h2 id="_1">Список тем</h2>
 <ol>
-<li><strong>Введение в ПЛК серии FX и GX Works 2</strong></li>
-<li>Обзор ПЛК Mitsubishi FX и совместимых ПЛК (FX3G, FX3U):<ul>
+<li>
+<p><strong>Введение в Курс</strong></p>
+<ul>
+<li>Знакомство с автором курса</li>
+<li>Почему этот курс был написан</li>
+<li>Для кого этот курс</li>
+<li>Как изучать этот курс</li>
+</ul>
+</li>
+<li>
+<p><strong>Введение в <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> серии <abbr title="Серия ПЛК Митсубиси">FX</abbr> и GX Works 2</strong></p>
+<ul>
+<li>Обзор <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> Mitsubishi <abbr title="Серия ПЛК Митсубиси">FX</abbr> и совместимых <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> (<abbr title="Модель серии FX ПЛК Митсубиси">FX3G</abbr>, <abbr title="Модель серии FX ПЛК Митсубиси">FX3U</abbr>):<ul>
 <li>Особенности.</li>
 <li>Области применения.</li>
 <li>Преимущетва использования.</li>
-<li>Как правильно выбрать совместимый ПЛК.</li>
+<li>Как правильно выбрать совместимый <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
 </ul>
 </li>
-<li>Знакомство с GX Works 2: установка, интерфейс, настройка проекта.</li>
-<li>Основные преимущества языка Structured Text (ST) по сравнению с Ladder и другими языками IEC 61131-3.</li>
+<li>Основные преимущества языка Structured Text (<abbr title="Structured Text">ST</abbr>) по сравнению с Ladder и другими языками IEC 61131-3.<ul>
+<li>О языке <abbr title="Structured Text">ST</abbr> в GX Works 2, его особенности и почему они есть</li>
+<li>Переносимость проектов из <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> в <abbr title="Программируемый Логический Контроллер">ПЛК</abbr></li>
+<li>Гибкость логики</li>
+</ul>
+</li>
+<li>Знакомство с GX Works 2:<ul>
+<li>Установка</li>
+<li>Создание нового проекта для <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> <abbr title="Серия ПЛК Митсубиси">FX</abbr> в GX Works 2: выбор модели <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>, настройка параметров.</li>
+<li>Настройка проекта выбор платформы</li>
+<li>Интерфейс<ul>
+<li>Структура проекта</li>
+<li>Меню</li>
+<li>Обзор окон краткий</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>
-<p>Создание нового проекта для ПЛК FX в GX Works 2: выбор модели ПЛК, настройка параметров.</p>
+<p><strong>Работа с переменным <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> <abbr title="Серия ПЛК Митсубиси">FX</abbr></strong></p>
+<ul>
+<li>Адресация в <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> <abbr title="Серия ПЛК Митсубиси">FX</abbr>: цифровые входы (X), выходы (Y), регистры (D|R), таймеры (T), счетчики (C)</li>
+<li>Создание переменных в отдельном окне</li>
+<li>Области видимости переменных локальные, глобальные, входные/выходные их объявление и использование</li>
+<li>Типы переменных BOOL, INT, DINT, REAL, STRING и др.</li>
+<li>Создание глобальных переменных или констант входных и базовых</li>
+<li>Сопоставление физических входов/выходов и адресации с переменными в <abbr title="Structured Text">ST</abbr>.</li>
+</ul>
 </li>
 <li>
 <p><strong>Основы языка Structured Text</strong></p>
+<ul>
+<li>Комментарий</li>
+<li>IF-THEN-ELSE</li>
+<li>Операторы битовые</li>
+<li>Мониторинг и отладка программы в GX Works 2: использование онлайн-режима, точек останова.</li>
+<li>Примеры:<ul>
+<li>Задача один вход один выход</li>
+<li>Задача 2 входа один выход</li>
+<li>Задача 2 из 3х входов один выход</li>
+</ul>
 </li>
-<li>Синтаксис ST: структура программы, операторы, комментарии.</li>
-<li>Типы данных в ST: BOOL, INT, DINT, REAL, STRING и др.</li>
-<li>Переменные: локальные, глобальные, входные/выходные (I/O), их объявление и использование.</li>
-<li>
-<p>Основные операторы: арифметические, логические, сравнения.</p>
-</li>
-<li>
-<p><strong>Работа с входами и выходами ПЛК FX</strong></p>
-</li>
-<li>Адресация в ПЛК FX: цифровые входы (X), выходы (Y), регистры (D), таймеры (T), счетчики (C).</li>
-<li>Сопоставление физических входов/выходов с переменными в ST.</li>
-<li>
-<p>Чтение состояний входов и управление выходами в ST.</p>
+</ul>
 </li>
 <li>
-<p><strong>Управляющие конструкции в ST</strong></p>
-</li>
-<li>Условные операторы: IF-THEN-ELSE, CASE.</li>
-<li>Циклы: FOR, WHILE, REPEAT-UNTIL.</li>
-<li>
-<p>Практические примеры: управление светодиодом, обработка сигналов с датчиков.</p>
-</li>
-<li>
-<p><strong>Работа с таймерами и счетчиками</strong></p>
-</li>
-<li>Настройка и использование таймеров (T) в ST: TON, TOF, TP.</li>
-<li>Программирование счетчиков (C): инкремент, декремент, сброс.</li>
-<li>
-<p>Примеры: создание задержек, подсчет импульсов.</p>
+<p><strong>Типы <abbr title="Элемент программы (Program Organisation Unit)">POU</abbr></strong></p>
+<ul>
+<li>Разница между фукнциями и блоками</li>
+<li>Ограничения функций и почему</li>
+<li>Создание <abbr title="Функциональный блок">FB</abbr> и <abbr title="Функция">FUN</abbr></li>
+<li>Струкутуры</li>
+<li>Создание структуры регулятора</li>
+</ul>
 </li>
 <li>
-<p><strong>Обработка данных и регистры</strong></p>
+<p><strong>Математика</strong></p>
+<ul>
+<li>Операторы математические</li>
+<li>Работа с регистрами данных (D|R) в <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> <abbr title="Серия ПЛК Митсубиси">FX</abbr>.</li>
+<li>Манипуляции с данными:<ul>
+<li>Арифметические операции.</li>
+<li>Преобразование типов.</li>
+</ul>
 </li>
-<li>Работа с регистрами данных (D) в ПЛК FX.</li>
-<li>Манипуляции с данными: арифметические операции, преобразование типов.</li>
-<li>
-<p>Примеры: вычисление среднего значения, обработка аналоговых сигналов (при наличии модулей).</p>
+<li>Примеры:<ul>
+<li>вычисление среднего значения.</li>
+<li>обработка аналоговых сигналов.</li>
+<li>Регулятор простой (режимы холод зима)</li>
+</ul>
 </li>
-<li>
-<p><strong>Функции и функциональные блоки в ST</strong></p>
-</li>
-<li>Создание пользовательских функций (FUN) и функциональных блоков (FB) в GX Works 2.</li>
-<li>Встроенные функции ST: математические, логические, работа со строками.</li>
-<li>
-<p>Примеры: написание функции для обработки данных с датчика температуры.</p>
-</li>
-<li>
-<p><strong>Обработка ошибок и диагностика</strong></p>
-</li>
-<li>Обработка исключений в ST: TRY-CATCH (если поддерживается).</li>
-<li>Использование флагов ошибок ПЛК FX (M, D).</li>
-<li>
-<p>Мониторинг и отладка программы в GX Works 2: использование онлайн-режима, точек останова.</p>
+</ul>
 </li>
 <li>
-<p><strong>Работа с аналоговыми модулями (при наличии)</strong></p>
+<p><strong>Работа с таймерами</strong></p>
+<ul>
+<li>Настройка и использование таймеров (T)</li>
+<li>TON, TOF, TP.</li>
+<li>Примеры: создание задержек.</li>
+</ul>
 </li>
-<li>Настройка аналоговых входов/выходов для ПЛК FX (например, FX2N-4AD, FX2N-4DA).</li>
-<li>Программирование обработки аналоговых сигналов в ST.</li>
 <li>
-<p>Примеры: регулирование скорости двигателя, обработка данных с датчиков.</p>
+<p><strong>Работа с счетчиками</strong></p>
+<ul>
+<li>Программирование счетчиков (C)</li>
+<li>Счетчики CTU, CTD, ... инкремент, декремент, сброс.</li>
+<li>Быстрые входы и выходы, прерывания по счетчику.</li>
+<li>Примеры: подсчет импульсов.</li>
+</ul>
+</li>
+<li>
+<p><strong>Прерывания</strong></p>
+<ul>
+<li>Прерывания по времени I630</li>
+<li>Прерывания по входу I100</li>
+</ul>
+</li>
+<li>
+<p><strong>Массивы</strong></p>
+<ul>
+<li>Создание массивов</li>
+<li>Созадние массив структур</li>
+<li>Циклы: FOR.</li>
+<li>Пример регулятор в цикле</li>
+</ul>
+</li>
+<li>
+<p><strong>Управляющие конструкции в <abbr title="Structured Text">ST</abbr></strong></p>
+<ul>
+<li>Условные операторы CASE.</li>
+<li>Пошагвое исполнение программы, изоляция кода.</li>
+<li>Практические примеры: управление светодиодом, обработка сигналов с датчиков.</li>
+</ul>
+</li>
+<li>
+<p><strong>Создание библиотек</strong></p>
+<ul>
+<li>Установка готовых бибилотек</li>
+<li>Создание библиотек</li>
+<li>Правка и использование в программе</li>
+</ul>
+</li>
+<li>
+<p><strong>Работа с аналоговыми входам</strong></p>
+<ul>
+<li>Настройка аналоговых входов для <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
+<li>Настройка аналоговых входов для модуле.</li>
+<li>Программирование обработки аналоговых входов.</li>
+<li>Настройка аналоговых выходов для <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
+<li>Настройка аналоговых выходов для модуле.</li>
+<li>Программирование обработки аналоговых выходов.</li>
+<li>Примеры: регулирование скорости двигателя, обработка данных с датчиков.</li>
+</ul>
+</li>
+<li>
+<p><strong>ПИД регулятор</strong></p>
+<ul>
+<li>Устройство пид регулятора и его инициализация</li>
+<li>Автонастройка</li>
+<li>Пример: Написать пид регулятро поддержания температуры.</li>
+</ul>
 </li>
 <li>
 <p><strong>Коммуникация и интеграция</strong></p>
 <ul>
-<li>Основы коммуникационных протоколов ПЛК FX: Modbus, CC-Link (если применимо).</li>
-<li>Настройка обмена данными между ПЛК и другими устройствами.</li>
-<li>Примеры: чтение данных с HMI или другого ПЛК.</li>
+<li>Настройка портов RS485 как Modbus Slave.</li>
+<li>Настройка портов RS485 как Modbus Master.</li>
+<li>Настройка портов RS485 как Mitsubishi Slave.</li>
+<li>Программа обмена данными между <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> и другими устройствами по протоколу Modbus RTU принципы.</li>
+<li>Использование библиотеки Модбас.</li>
+<li>Настройка удаленных каплеров по EIP.</li>
+<li>Примеры: чтение данных с модуля веса или другого <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
+<li>Примеры: передача днаных в панель.</li>
 </ul>
 </li>
 <li>
-<p><strong>Оптимизация программ на ST</strong></p>
+<p><strong>Управление тервогами</strong></p>
 <ul>
-<li>Лучшие практики написания читаемого и эффективного кода.</li>
-<li>Оптимизация использования памяти ПЛК FX.</li>
-<li>Модульное программирование: структурирование кода для повторного использования.</li>
+<li>Что такое тревоги, для сего они нужны, их оснвные свойства.</li>
+<li>Знакомство с библиотекой Мендежера Тревог</li>
+<li>Пример: создание нескольких тревог, выхода температуры за пределы регулирования, обры датчика аналогового и заблочить управление регулятором.</li>
 </ul>
 </li>
 <li>
 <p><strong>Практические проекты и отладка</strong></p>
 <ul>
 <li>Разработка комплексного проекта: управление конвейером, автоматизация насосной станции и т.д.</li>
-<li>Использование симулятора GX Works 2 для тестирования программ без физического ПЛК.</li>
-<li>Загрузка программы на ПЛК и тестирование на реальном оборудовании.</li>
-</ul>
-</li>
-<li>
-<p><strong>Документирование и поддержка проектов</strong></p>
-<ul>
-<li>Создание документации для программ: комментарии, описания переменных.</li>
-<li>Экспорт и импорт проектов в GX Works 2.</li>
-<li>Советы по поддержке и обновлению программ.</li>
-</ul>
-</li>
-<li>
-<p><strong>Обзор ограничений и переход к GX Works 3</strong></p>
-<ul>
-<li>Ограничения GX Works 2 и ПЛК FX (например, объем памяти, поддерживаемые модули).</li>
-<li>Сравнение с GX Works 3 и новые возможности для ПЛК FX5U.</li>
-<li>Перенос проектов из GX Works 2 в GX Works 3.</li>
+<li>Использование симулятора GX Works 2 для тестирования программ без физического <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
+<li>Загрузка программы на <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> и тестирование на реальном оборудовании.</li>
 </ul>
 </li>
 </ol>
 <h2 id="_2">Примечания к структуре курса</h2>
 <ul>
 <li><strong>Практическая направленность</strong>: Каждая тема должна сопровождаться практическими примерами и заданиями, например, создание программы для управления реальным процессом (освещение, двигатель, датчик).</li>
-<li><strong>Постепенное усложнение</strong>: Темы выстроены от простого (основы ST и I/O) к сложному (аналоговые модули, коммуникации).</li>
+<li><strong>Постепенное усложнение</strong>: Темы выстроены от простого (основы <abbr title="Structured Text">ST</abbr> и I/O) к сложному (аналоговые модули, коммуникации).</li>
 <li><strong>Адаптация под аудиторию</strong>: Если курс рассчитан на новичков, добавьте больше времени на первые три темы. Для опытных пользователей можно сократить базовые темы и сосредоточиться на продвинутых (9–12).</li>
-<li><strong>Интерактивность</strong>: Используйте симулятор GX Works 2 для демонстрации, особенно если у учеников нет доступа к реальным ПЛК.</li>
+<li><strong>Интерактивность</strong>: Используйте симулятор GX Works 2 для демонстрации, особенно если у учеников нет доступа к реальным <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>.</li>
 <li><strong>Длительность</strong>: Для полного курса (с практикой) потребуется около 20–40 часов, в зависимости от уровня подготовки аудитории.</li>
 </ul>
+<!-- markdownlint-disable MD041 -->
 
 
 
@@ -501,8 +622,46 @@
 
 
 
+  
+    
+  
+  
 
 
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Последнее обновление">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 июля 2025 г. 11:00:04 UTC">25 июля 2025 г.</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Участники">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:serhioromano@outlook.com">Serhioromano</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+  
 
 
 
@@ -517,22 +676,24 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  К началу
 </button>
         
       </main>
       
         <footer class="md-footer">
   
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Все права защищены &copy; 2025 Сергей Романов
+
+    </div>
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -546,12 +707,76 @@
     </div>
     
     
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "navigation.expand", "navigation.sections", "navigation.tracking", "navigation.search.highlight", "navigation.search.suggestions", "navigation.search.share", "navigation.search.autocomplete", "navigation.search.filter", "navigation.search.sort", "navigation.search.results", "navigation.search.pagination", "navigation.search.history", "navigation.search.indexing", "navigation.search.custom", "navigation.search.advanced", "navigation.search.analytics", "navigation.search.debug"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Принять</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Управлять настройками</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.expand", "navigation.sections", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.footer", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.tooltips", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="javascripts/hjs.js"></script>
+      
+        <script src="javascripts/hl.js"></script>
       
     
   </body>
