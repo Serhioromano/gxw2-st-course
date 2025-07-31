@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://serhioromano.github.io/gxw2-st-course/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
-         <loc>https://serhioromano.github.io/gxw2-st-course/part1/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <loc>https://serhioromano.github.io/gxw2-st-course/toc/</loc>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
-         <loc>https://serhioromano.github.io/gxw2-st-course/a/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <loc>https://serhioromano.github.io/gxw2-st-course/1-intro/fx-overview/</loc>
+         <lastmod>2025-07-31</lastmod>
+    </url>
+    <url>
+         <loc>https://serhioromano.github.io/gxw2-st-course/1-intro/gxw2-install/</loc>
+         <lastmod>2025-07-31</lastmod>
+    </url>
+    <url>
+         <loc>https://serhioromano.github.io/gxw2-st-course/1-intro/gxw2-interface/</loc>
+         <lastmod>2025-07-31</lastmod>
     </url>
     <url>
          <loc>https://serhioromano.github.io/gxw2-st-course/includes/abbreviations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-31</lastmod>
     </url>
 </urlset>
