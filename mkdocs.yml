@@ -10,7 +10,13 @@ repo_url: https://github.com/serhioromano/gxw2-st-course
 edit_uri: edit/main/docs/
 
 nav:
-  - Главная: index.md
+  - Главная:
+    - Введение: index.md
+    - Список тем: toc.md
+  - 1. Введение:
+    - Обзор ПЛК FX: 1-intro/fx-overview.md
+    - Установка и настройка: 1-intro/gxw2-install.md
+    - Интерфейс GX Works 2: 1-intro/gxw2-interface.md
 
 plugins:
   - search

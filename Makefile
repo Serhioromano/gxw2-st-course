@@ -16,5 +16,5 @@ init:
 
 deploy:
 	@echo "Deploying the application..."
-	mkdocs hg-deploy
+	mkdocs gh-deploy
 	@echo "Deployment complete."
