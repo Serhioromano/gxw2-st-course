@@ -13,6 +13,7 @@ init: gitc
 	@pip3 install mkdocs-git-committers-plugin
 
 gitc:
+	git config pull.rebase false
 	git config --global user.name "Serhioromano"
 	git config --global user.email "Serhioromano@outlook.com"
 
