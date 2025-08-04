@@ -5,12 +5,14 @@ serve:
 	mkdocs serve
 
 init: gitc
+	@echo "Start PIP configuration"
 	@pip install --upgrade pip
 	@pip3 install mkdocs
 	@pip3 install mkdocs-material
 	@pip3 install mkdocs-git-authors-plugin
 	@pip3 install mkdocs-git-revision-date-localized-plugin
 	@pip3 install mkdocs-git-committers-plugin
+	@echo "Configuration is done"
 
 gitc:
 	git config pull.rebase false

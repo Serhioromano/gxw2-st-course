@@ -39,4 +39,5 @@
         "latex",
         "plaintext"
     ],
+    "makefile.configureOnOpen": false,
 }
