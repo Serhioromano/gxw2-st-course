@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "yaml.schemas": {
         "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
     },

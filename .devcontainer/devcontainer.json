@@ -12,7 +12,8 @@
                 "bierner.markdown-shiki",
                 "yzhang.markdown-all-in-one",
                 "redhat.vscode-yaml",
-                "streetsidesoftware.code-spell-checker-russian"
+                "streetsidesoftware.code-spell-checker-russian",
+                "ms-vscode.makefile-tools"
             ]
         }
     },
