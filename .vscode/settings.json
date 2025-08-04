@@ -29,4 +29,5 @@
         "каплеров",
         "каплером"
     ],
+    "files.autoSave": "afterDelay",
 }
