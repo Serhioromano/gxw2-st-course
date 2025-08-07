@@ -40,4 +40,9 @@
         "plaintext"
     ],
     "makefile.configureOnOpen": false,
+    "spellright.parserByClass": {
+        "dictionary": {
+            "parser": "markdown"
+        }
+    },
 }
