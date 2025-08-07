@@ -1,0 +1,1406 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Подготовка материалов для курса по программированию ПЛК Mitsubishi серии FX.">
+      
+      
+        <meta name="author" content="Сергей Романов">
+      
+      
+        <link rel="canonical" href="https://serhioromano.github.io/gxw2-st-course/2-basic/variables/">
+      
+      
+        <link rel="prev" href="../../1-intro/gxw2-interface/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Переменные - Курс по GX Works 2 для (FX3G, FX3U)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/code.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Курс по GX Works 2 для (FX3G, FX3U)" class="md-header__button md-logo" aria-label="Курс по GX Works 2 для (FX3G, FX3U)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Курс по GX Works 2 для (FX3G, FX3U)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Переменные
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Темный режим"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Темный режим" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлый режим"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлый режим" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поделиться" aria-label="Поделиться" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/serhioromano/gxw2-st-course" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    serhioromano/gxw2-st-course
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Главная
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../1-intro/fx-overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  1. Введение
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  1. База
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Курс по GX Works 2 для (FX3G, FX3U)" class="md-nav__button md-logo" aria-label="Курс по GX Works 2 для (FX3G, FX3U)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Курс по GX Works 2 для (FX3G, FX3U)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/serhioromano/gxw2-st-course" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    serhioromano/gxw2-st-course
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Главная
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Список тем
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    1. Введение
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Введение
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intro/fx-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Обзор ПЛК FX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intro/gxw2-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Установка и настройка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-intro/gxw2-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Интерфейс GX Works 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1. База
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            1. База
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Переменные
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Переменные
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Типы переменных
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Блоки (Devices)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Блоки (Devices)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область М
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область T и С
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Энергонезависимость
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Объявление переменных
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Области видимости
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Глобальные
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/serhioromano/gxw2-st-course/edit/main/docs/2-basic/variables.md" title="Редактировать страницу" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/serhioromano/gxw2-st-course/raw/main/docs/2-basic/variables.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">Переменные</h1>
+<p>Переменные в <abbr title="Среда разработки GX Works 2 для ПЛК Mitsubishi">GX Works 2</abbr> это достаточно большая тема, и не для всех она простая. Даже если у вас есть опыт программирования например в CoDeSys то здесь концепт немного другой и сначала может быть немного не привычно. С другой стороны если вы уже программировали <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> такие как Delta или Omron, то трудностей с пониманием может не возникнуть.</p>
+<h2 id="_2">Типы переменных</h2>
+<p>Стандартные типы переменных в <abbr title="Среда разработки GX Works 2 для ПЛК Mitsubishi">GX Works 2</abbr> именуются отлично от стандарта МЭК-61131-3. Есть всего 7 типов.</p>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>МЭК-61131-3</th>
+<th>Бит</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bit</td>
+<td><code>BOOL</code>, <code>BIT</code></td>
+<td>1</td>
+<td>Булева переменная 0/1</td>
+</tr>
+<tr>
+<td>Word[Signed]</td>
+<td><code>INT</code></td>
+<td>16</td>
+<td>Число со знаком -32,768 до 32,767</td>
+</tr>
+<tr>
+<td>Double Word[Signed]</td>
+<td><code>DINT</code></td>
+<td>32</td>
+<td>Число со знаком -2,147,483,648 до 2,147,483,647</td>
+</tr>
+<tr>
+<td>Word[Unsigned/Bit String]</td>
+<td><code>UINT</code>, <code>WORD</code></td>
+<td>16</td>
+<td>Число без знака 0 до 65,535</td>
+</tr>
+<tr>
+<td>Double Word[Unsigned/Bit String]</td>
+<td><code>UDINT</code>, <code>DWORD</code></td>
+<td>32</td>
+<td>Число без знака 0 до 4,294,967,296</td>
+</tr>
+<tr>
+<td>FLOAT (Single precision)</td>
+<td><code>REAL</code></td>
+<td>32</td>
+<td>С плавающей точкой -2<sup>128</sup> до +2<sup>128</sup></td>
+</tr>
+<tr>
+<td>Time</td>
+<td><code>TIME</code></td>
+<td>32</td>
+<td>Время <code>T#-24d20h31m23s648ms</code> до <code>T#24d20h31m23s647ms</code></td>
+</tr>
+</tbody>
+</table>
+<p>в <abbr title="Среда разработки GX Works 2 для ПЛК Mitsubishi">GX Works 2</abbr> поддерживаются и другие типы данных. Например <em>FLOAT (Double precision)</em> это число с плавающей точкой но 64-bit. Или есть <em>String</em> как понятно из название это строка. Но они не поддерживаются для <abbr title="Модель серии FX ПЛК Mitsubishi">FX3G</abbr>\<abbr title="Модель серии FX ПЛК Mitsubishi">FX3U</abbr>, и поэтому мы не будем их рассматривать.</p>
+<h2 id="devices">Блоки (Devices)</h2>
+<p>Прежде чем научится объявлять переменные, нужно постичь концепт <abbr title="Среда разработки GX Works 2 для ПЛК Mitsubishi">GX Works 2</abbr> в отношении блоков.</p>
+<p>В контроллерах Mitsubishi вся память разделена на разные области (<code>D</code>, <code>R</code>, <code>M</code>, <code>Y</code>, <code>X</code>, ...), и каждый блок области памяти пронумерован. Такой блок называют Device. Например <code>D100</code>, <code>M10</code>, <code>TC0</code>, <code>X001</code>, <code>R1000</code>. Блоки могут быть размером или 1-бит или 16-бит.</p>
+<p>Блоки размером 1 бит это <em>реле</em> если в блок можно и писать и читать. В контексте записи в блок это <em>катушки</em> если в него можно писать, и <em>контакты</em> если его можно читать.</p>
+<p>На блоки размером 16 бит часто ссылаются как <em>регистр</em>. Если мы храним значение больше чем 16-бит, то это значение просто занимает 2 или более <em>регистров</em> (блоков).</p>
+<div class="admonition info">
+<p class="admonition-title"><strong>Информация</strong></p>
+<p>В других русских инструкциях Devices переведены как Операнды. Термин <strong>блок</strong> ввожу я, и если вы будете им где то оперировать, вас могут не понять. Еще одно подходящее название для термина Device - <strong>ячейка</strong>. Ссылается на ячейку в области памяти.</p>
+</div>
+<p>Давайте поговорим о самых важных для нас областях памяти.</p>
+<h3 id="x">Область <strong>X</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Bit</th>
+<th>Доступ</th>
+<th>Диапазон</th>
+<th>Значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Входное реле</td>
+<td>1</td>
+<td>Читать</td>
+<td><code>X000</code>~<code>X377</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+</tbody>
+</table>
+<p>Область памяти напрямую связанная с аппаратными входами <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> и является <em>контактом</em>. Писать в него нельзя, только читать. Блок <code>X000</code> это первый вход, <code>X001</code> второй и так далее. Всего <strong>255</strong> входов.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Считается восьмеричной системой</strong></p>
+<p>На <abbr title="Модель серии FX ПЛК Mitsubishi">FX3G</abbr>\<abbr title="Модель серии FX ПЛК Mitsubishi">FX3U</abbr> данная область памяти считается в восьмеричном формате. Это значит что цифр 8 и 9 в счете нету. <code>Х0</code>, <code>X1</code>, <code>X2</code>, <code>X3</code>, <code>X4</code>, <code>X5</code>, <code>X6</code>, <code>X7</code>, <code>X10</code>, <code>X11</code>, и тд. <code>X0</code>~<code>X7</code>, <code>X10</code>~<code>X17</code>, <code>X20</code>~<code>X27</code>, ...</p>
+</div>
+<p>Когда на вход <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> поступает ток, контакт меняет сове значение с <code>FALSE</code> на <code>TRUE</code> или с <strong>0</strong> на <strong>1</strong>. При сравнении данных контакта можно использовать как <code>TRUE</code>, <code>FALSE</code> так и <strong>0</strong>, <strong>1</strong>.</p>
+<pre class="highlight"><code class="language-iecst">IF X0 = 1 THEN
+    Y0 := 1;
+END_IF;
+
+IF X2 = FALSE THEN
+    Y0 := FALSE;
+END_IF;</code></pre>
+<p>Это просто пример для демонстрации. Так ни кто не пишет естественно. Обычно выражение <code>IF X0 = 1 THEN</code> записывают <code>IF X0 THEN</code>, а <code>IF X2 = FALSE THEN</code> обычно пишут как <code>IF NOT X2 THEN</code>, тем не менее данный пример демонстрирует что можно использовать как <code>TRUE</code>, <code>FALSE</code> так и <strong>0</strong>, <strong>1</strong>.</p>
+<h3 id="y">Область <strong>Y</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Bit</th>
+<th>Доступ</th>
+<th>Диапазон</th>
+<th>Значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Выходное реле</td>
+<td>1</td>
+<td>Читать Писать</td>
+<td><code>Y000</code>~<code>Y377</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+</tbody>
+</table>
+<p>Область памяти напрямую связанная с аппаратными выходами <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> и является <em>реле</em>. Можно как читать так и писать, но по сути они нужны чтобы именно писать в них. Когда мы пишем в <em>реле</em> то это <em>катушка</em>, когда читаем это <em>контакт</em>. Реле <code>Y0</code> это первый выход, <code>Y1</code> второй и так далее. Всего <strong>255</strong> реле.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Считается восьмеричной системой</strong></p>
+<p>На <abbr title="Модель серии FX ПЛК Mitsubishi">FX3G</abbr>\<abbr title="Модель серии FX ПЛК Mitsubishi">FX3U</abbr> данная область памяти считается в восьмеричном формате. Это значит что цифр 8 и 9 в счете нету. <code>Y0</code>, <code>Y1</code>, <code>Y2</code>, <code>Y3</code>, <code>Y4</code>, <code>Y5</code>, <code>Y6</code>, <code>Y7</code>, <code>Y10</code>, <code>Y11</code>, и тд. <code>Y0</code>~<code>Y7</code>, <code>Y10</code>~<code>Y17</code>, <code>Y20</code>~<code>Y27</code>, ...</p>
+</div>
+<p>Если присвоить реле <code>Y0</code> значение <code>TRUE</code> или <strong>1</strong> то <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> замкнет соответствующее выходу реле или транзистор если выход транзисторный.</p>
+<pre class="highlight"><code class="language-iecst">Y0 := X0;
+Y1 := TRUE;
+Y2 := Y0;</code></pre>
+<p>В первой строке видно что можно писать в <em>катушку</em> <code>Y</code> значения <em>контактов</em> <code>X</code> и как дальше увидим <code>M</code> и других контактов, которые можно читать. А читать можно любые реле и контакты.</p>
+<p>В третей строке мы видим что реле в <code>Y</code> можно как писать так и читать из него.</p>
+<h3 id="_3">Область <strong>М</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Bit</th>
+<th>Доступ</th>
+<th>Диапазон</th>
+<th>Значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Обычные</td>
+<td>1</td>
+<td>Читать Писать</td>
+<td><code>M0</code>~<code>M383</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+<tr>
+<td>EEPROM энергонезависимые</td>
+<td>1</td>
+<td>Читать Писать</td>
+<td><code>M384</code>~<code>M1535</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+<tr>
+<td>Обычные</td>
+<td>1</td>
+<td>Читать Писать</td>
+<td><code>M1536</code>~<code>M7679</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+<tr>
+<td>Системные</td>
+<td>1</td>
+<td>Читать Писать</td>
+<td><code>M8000</code>~<code>M8511</code></td>
+<td><code>TRUE</code>, <code>FALSE</code> или 0, 1</td>
+</tr>
+</tbody>
+</table>
+<p>Это область "дополнительных реле", и связана с памятью <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>. Называются они "дополнительные реле", потому что не связаны с аппаратной платформой <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>, а существуют только в памяти программы. В <code>M</code> можно как писать так и читать из них.</p>
+<div class="admonition info">
+<p class="admonition-title"><strong>Информация</strong></p>
+<p>Системные реле <code>M8000</code>~<code>M8511</code> содержат доступ к аппаратной информации или флаги работы внутренних инструкций или позволяют конфигурировать некоторые аспекты работы <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>. Они по большей части совпадают с системными регистрами Mitsubishi. Например <code>M8002</code> переходит в состояние <code>TRUE</code> один цикл <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> на старте, <code>M8013</code> меняет свое состояние раз в секунду, если активировать <code>M8192</code> то порт 3 перейдет из протокола Mitsubishi в режим Modbus.</p>
+<p>Полный список системных реле <code>M</code> смотрите в документации Coolmay к <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> L02 <a href="../../downloads/Coolmay%20L02%20Series%20PLC%20Programming%20Manual%20V22.111.pdf">coolmay/Documentation/EN/L02/Coolmay L02 Series PLC Programming Manual V22.111.pdf</a>.</p>
+</div>
+<h3 id="d">Область <strong>D</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Bit</th>
+<th>Доступ</th>
+<th>Диапазон</th>
+<th>Значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Обычные</td>
+<td>16</td>
+<td>Читать Писать</td>
+<td><code>D0</code>~<code>D127</code></td>
+<td>-32,768 до 32,767</td>
+</tr>
+<tr>
+<td>EEPROM энергонезависимые</td>
+<td>16</td>
+<td>Читать Писать</td>
+<td><code>D128</code>~<code>D7999</code></td>
+<td>-32,768 до 32,767</td>
+</tr>
+<tr>
+<td>Системные</td>
+<td>16</td>
+<td>Читать Писать</td>
+<td><code>D8000</code>~<code>D8511</code></td>
+<td>-32,768 до 32,767</td>
+</tr>
+</tbody>
+</table>
+<p>Основная область памяти для хранения значений переменных числового типа - регистры. Как 16ти битных так и 32ух битных. Регистры этой области ни знают какой тип данных в них хранится если в программе обращаться к регистру напрямую. По умолчанию значения регистра расцениваются как 16ти битные числа <code>INT</code>.</p>
+<pre class="highlight"><code class="language-iecst">D3 := -100;
+D0 := 0 + D3;
+D1 := D0 / 2;
+D4 := D3 - 10;
+D5 := 65000;</code></pre>
+<p>Значения при работе будут следующими</p>
+<p><img alt="D пример" src="../../img/dexample.png" /></p>
+<p>Так как это по умолчанию <code>INT</code> 16ти битный, то если мы присвоим ему значение больше 32,767, он их примет как <code>WORD</code> принимающий от 0 до 65,535, но автоматически сконвертирует значение в <code>INT</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Забегая наперед</strong></p>
+<p>В реальных проектах вы вряд ли будете обращаться к регистрам <code>D</code>, да и любым другим блоками напрямую, а будете создавать символьные переменные и назначать им нужный тип. Я крайне не рекомендую работать с блоками напрямую, кроме блоков таймеров <code>Т</code> и счетчиков <code>С</code> и индекса <code>Z</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><strong>Информация</strong></p>
+<p>Системные блоки <code>M8000</code>~<code>M8511</code> содержат доступ к аппаратной информации или флаги работы внутренних инструкций или позволяют конфигурировать некоторые аспекты работы <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>. Они по большей части совпадают с системными регистрами Mitsubishi. Например, <code>D8000</code> можно назначить таймер Watchdog, <code>D8012</code> содержит максимальное время цикла <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>, <code>D8030</code> значение на первом аналоговом входе <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> от 0~4092.</p>
+<p>Полный список системных регистров <code>D</code> смотрите в документации Coolmay к <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> L02 <a href="../../downloads/Coolmay%20L02%20Series%20PLC%20Programming%20Manual%20V22.111.pdf">coolmay/Documentation/EN/L02/Coolmay L02 Series PLC Programming Manual V22.111.pdf</a>.</p>
+</div>
+<h3 id="r">Область <strong>R</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Bit</th>
+<th>Доступ</th>
+<th>Диапазон</th>
+<th>Значения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EEPROM энергонезависимые</td>
+<td>16</td>
+<td>Читать Писать</td>
+<td><code>R0</code>~<code>R22999</code></td>
+<td>-32,768 до 32,767</td>
+</tr>
+<tr>
+<td>Системные</td>
+<td>16</td>
+<td>Читать Писать</td>
+<td><code>R23000</code>~<code>R23999</code></td>
+<td>-32,768 до 32,767</td>
+</tr>
+</tbody>
+</table>
+<p>Регистры области <code>R</code> это тоже самое что и <code>D</code>. Можно использовать и те и другие. Они все поддерживают сохранение при потере питания.</p>
+<p>Системные регистры тут не относятся к системным регистрам Mitsubishi, а зарезервированы Coolmay для их собственных решений. Например: <code>R23700</code> хранит значение на первом аналоговом входе модуля расширения и принимает значение 0-32,000.</p>
+<h3 id="t">Область <strong>T</strong> и <strong>С</strong></h3>
+<p>Область хранения данных таймеров и счетчиков. Мы сейчас о них не будем говорить, а подробно рассмотрим их когда будем изучать эту тему.</p>
+<table>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Диапазон</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Шаг 100ms</td>
+<td><code>T0</code>~<code>T199</code></td>
+</tr>
+<tr>
+<td>Шаг 10ms</td>
+<td><code>T200</code>~<code>T245</code></td>
+</tr>
+<tr>
+<td>Шаг 1ms аккумулятивный EEPROM</td>
+<td><code>T246</code>~<code>T249</code></td>
+</tr>
+<tr>
+<td>Шаг 100ms аккумулятивный EEPROM</td>
+<td><code>T250</code>~<code>T255</code></td>
+</tr>
+<tr>
+<td>Шаг 1ms</td>
+<td><code>T256</code>~<code>T319</code></td>
+</tr>
+</tbody>
+</table>
+<p>Таймеры в <abbr title="Модель серии FX ПЛК Mitsubishi">FX3G</abbr>\<abbr title="Модель серии FX ПЛК Mitsubishi">FX3U</abbr> можно запускать стандартными Функциональными Блоками <code>TON</code>, <code>TOF</code>, <code>TP</code> но так же есть и свой способ работы с таймерами, который если обвыкнутся очень даже не плох.</p>
+<p>Каждый блок здесь является группой реле и регистров и обращаться напрямую к блоку <code>T0</code> вы ни когда не будете по крайней мере в <abbr title="Язык программирования ПЛК стандарта МЭК-61131-3: Structured Text">ST</abbr>.  Например <code>T0</code> это:</p>
+<ul>
+<li><code>TC0</code> - (Timer Coil) катушка таймера используется для назначения номера таймера.</li>
+<li><code>TS0</code> - (Timer State) контакт таймера, замыкается когда таймер завершает работу.</li>
+<li><code>TN0</code> - (Timer Number) время работы таймера, или сколько таймер уже отработал от начала работы в шагах.</li>
+</ul>
+<p>Сейчас только небольшой пример что-бы примерно увидеть как это выглядит, вникать не надо, мы будем рассматривать таймеры более подробно.</p>
+<pre class="highlight"><code class="language-iecst">OUT_T(X0, TC0, 10);
+M0 := TN0 &gt;= 5;
+Y0 := TS0;</code></pre>
+<p>3й параметр инструкции <code>OUT_T</code> - 10 - это 10 шагов. Так как мы использовали таймер <code>T0</code>, в таблице видим что его шаг 100ms. Это значит что шаг 100мс умножить на значение 10 - результат общее время 1000мс или 1с.</p>
+<p>В этом примере таймер <code>T0</code>, потому что мы указали <code>TC0</code> запустится когда контакт <code>X0</code> замкнется, и катушке <code>Y0</code> будет присвоено <code>TRUE</code> после одной секунды, так как контакт <code>TS0</code> замкнется по окончании работы таймера. А катушке <code>М0</code> будет подан <code>TRUE</code> через 500мс.</p>
+<p>Не буду на этом фокусироваться, если не понятно, ни страшно, это тема не про таймеры а про области памяти, просто того что область памяти <code>T</code> относится к таймерам, и каждый таймер это группа из 3х блоков, <code>TC</code>, <code>TS</code>, <code>TN</code>.</p>
+<h2 id="_4">Энергонезависимость</h2>
+<p>Если вам нужно использовать блоки, так чтобы они сохраняли свои значения после перезагрузки <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> то нужно использовать диапазон помеченный как <em>EEPROM энергонезависимые</em>. Для <code>М</code> это <code>M384</code>~<code>M1535</code>, для <code>D</code> это <code>D128</code>~<code>D7999</code> и для <code>R</code> это все.</p>
+<pre class="highlight"><code class="language-iecst">IF X2 THEN
+    M400 := TRUE;
+    M2000 := TRUE;
+
+    D0 := 100;
+    D200 := 100;
+END_IF;</code></pre>
+<p>В данном примере если мы кратковременно подадим ток на вход <code>X2</code> то <code>M400</code> и <code>M2000</code> примут значение <code>TRUE</code> a <code>D0</code> и <code>D200</code> примут значение <strong>100</strong>. Если после этого перегрузить <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>, то только <code>M400</code> сохранит значение <code>TRUE</code> и <code>D200</code> значение <strong>100</strong>, а <code>M2000</code> и <code>D0</code> будет сброшено в <code>FALSE</code> и <strong>0</strong>.</p>
+<p>Как это использовать?</p>
+<p>Для блоков D я например использую <code>D0</code>~<code>D127</code> для записи значения с датчиков, расчетные результаты которые делаются каждый цикл программы. А энергонезависимые для создания переменных в которых находятся настройки которые вводятся с панели. Тоже самое относительно блоков М. Я использую энергонезависимый диапазон если например есть кнопка запуска котла, она была включена когда пропало питание, и я хочу чтобы после восстановления питания кнопка так же была включена.</p>
+<p>Раз уж мы заговорили об EEPROM нужно упомянуть, все области памяти, в которые нужно жестко записывать для хранения без питания, как правило имеют ограниченное количество циклов записи. Что то, около 50 000. Значит ли это, что если вы используете переменную которая очень часто меняется, например 2 раза в секунду, то через 25 000 секунд она исчерпает ресурс памяти на запись?</p>
+<p>Ответ НЕТ. Запись в EEPROM происходит только в момент выключение <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>, и чтение в момент загрузки <abbr title="Программируемый Логический Контроллер">ПЛК</abbr>. Так что не беспокойтесь. Текущие присвоения значений во время обычной работы <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> работают с оперативной памятью которая такими ограничениями не обладает. А если <abbr title="Программируемый Логический Контроллер">ПЛК</abbr> включать и выключать хотя бы один раз в день, то ограничения памяти на запись, хватит больше чем на 100 лет.</p>
+<!-- Device number table
+Name Contents
+I/O relay
+Input relay X0~X377 256 points It is octal number
+Output relay Y000~Y377 256 points Total 512 I/O
+Auxiliary relay
+General M0~M383 384 points
+EEPROM hold M384~M1535 1152 points
+General M1536~M7679 6144 points
+Special M8000~M8511 512 points
+Status
+Initial state (EEPROM hold) S0～S9 10 points
+EEPROM hold S10～S999 990 points
+General S1000～S4095 3096 points
+Timer (ON delay timer)
+100ms T0～T199 200 points 0.1～3,276.7s
+10ms※1 T200～T245 46 points 0.01～327.67s
+1ms accumulative (EEPROM hold) T246～T249 4 points 0.001～32.767s
+100ms accumulative
+(EEPROM hold) T250～T255 6 points 0.1～3,276.7s
+1ms T256～T319 64 points 0.001~32.767s
+Counter
+General up counter (16bit) C0～C15 16 points 0～32,767 counter
+EEPROM hold up counter
+(16 bit) C16～C199 184 points 0～32,767 counter
+General bi-direction (32 bit) C200～C219 20 points -2,147,483,648～
++2,147,483,647 counter
+EEPROM hold bi-direction (32 bit) C220～C234 15 points -2,147,483,648～
++2,147,483,647 counter
+High-speed counter
+Single-phase single counter input
+Bi-direction (32 bit) (EEPROM hold) C235～C245
+-2,147,483,648～+2,147,483,647 Counter
+Software counter
+Single phase： at most 6 channel, 60kHz
+Double phase： 1 times frequency:at most 2-3
+channels, Max frequency 30KHz; M8198 is 4
+times frequency sign of C251/C252.
+4 times frequency:at most 2 channels,
+24kHz,M8199 is 4 times frequency sign of
+C253/C255. -->
+
+<h2 id="_5">Объявление переменных</h2>
+<h2 id="_6">Области видимости</h2>
+<p>В <abbr title="Среда разработки GX Works 2 для ПЛК Mitsubishi">GX Works 2</abbr> есть несколько областей видимости переменных.</p>
+<ol>
+<li>Глобальные</li>
+<li>Локальные</li>
+<li>Локальные</li>
+<li>Входные</li>
+<li>Выходные</li>
+<li>Проходные</li>
+</ol>
+<h2 id="_7">Глобальные</h2>
+<p>-65,536 to 65,535
+0 to 4,294,967,296
+2,147,483,648</p>
+<p>Глобальнее переменные определяются в списке глобальны переменных.</p>
+<!-- markdownlint-disable MD041 -->
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Последнее обновление">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="7 августа 2025 г. 13:40:26 UTC">7 августа 2025 г.</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Участники">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:serhioromano@outlook.com">Serhioromano</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../../1-intro/gxw2-interface/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Интерфейс GX Works 2">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                Интерфейс GX Works 2
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Все права защищены &copy; 2025 Сергей Романов
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Принять</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Управлять настройками</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.expand", "navigation.sections", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.footer", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.tooltips", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../javascripts/hjs.js"></script>
+      
+        <script src="../../javascripts/hl.js"></script>
+      
+    
+  </body>
+</html>
