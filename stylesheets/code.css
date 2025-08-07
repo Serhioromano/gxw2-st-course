@@ -34,6 +34,7 @@ base0E  #0f7ddb  Keywords, Storage, Selector, Markup Italic, Diff Changed
 base0F  #ffffff  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 */
 
+.md-typeset__table table tr td,
 .md-typeset .admonition,.md-typeset details {
     font-size: .8rem !important;
 }
