@@ -39,7 +39,8 @@ base0F  #ffffff  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php 
 }
 
 .md-content img {
-    width: 90%;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     border: 5px solid #898989ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: block;
