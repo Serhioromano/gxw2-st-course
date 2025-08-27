@@ -26,7 +26,7 @@ plugins:
   - meta
   - git-authors
   - git-revision-date-localized
-  - git-committers:
+  - git-committers-2:
       repository: serhioromano/gxw2-st-course
       branch: main
       token: !ENV GH_TOKEN
