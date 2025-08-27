@@ -29,6 +29,7 @@ plugins:
   - git-committers:
       repository: serhioromano/gxw2-st-course
       branch: main
+      token: !ENV GH_TOKEN
 
 markdown_extensions:
   - abbr
