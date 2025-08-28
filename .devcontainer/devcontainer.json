@@ -26,6 +26,9 @@
         }
     },
     "features": {
+        // "ghcr.io/tailscale/codespace/tailscale": {
+        //     "version": "latest"
+        // },
         "ghcr.io/devcontainers/features/node": {
             "version": "lts"
         }

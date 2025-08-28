@@ -1,10 +1,16 @@
-.PHONY: deploy init serve gitc
+.PHONY: deploy init serve gitc ts
 
 serve:
 	@echo "Starting the MkDocs server..."
 	mkdocs serve
 
+ts:
+	@sudo tailscale login
+	@sudo tailscale up --reset --hostname=mkdocs --accept-routes
+
 init: gitc
+	@export $(grep -v '^#' .env | xargs)
+# 	@sudo tailscale up --reset --hostname=mkdocs --accept-routes
 	@echo "Start PIP configuration"
 	@pip install --upgrade pip
 	@pip3 install mkdocs
@@ -15,9 +21,9 @@ init: gitc
 	@echo "Configuration is done"
 
 gitc:
-	git config pull.rebase false
-	git config --global user.name "Serhioromano"
-	git config --global user.email "Serhioromano@outlook.com"
+	@git config pull.rebase false
+	@git config --global user.name "Serhioromano"
+	@git config --global user.email "Serhioromano@outlook.com"
 
 deploy:
 	@echo "Deploying the application..."
