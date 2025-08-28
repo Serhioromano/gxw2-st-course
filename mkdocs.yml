@@ -19,6 +19,7 @@ nav:
     - Интерфейс GX Works 2: 1-intro/gxw2-interface.md
   - 1. База:
     - Переменные: 2-basic/variables.md
+    - Компиляция: 2-basic/compile.md
     - Таймеры: 2-basic/timer.md
 
 plugins:
