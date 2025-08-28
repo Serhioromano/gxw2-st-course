@@ -4,7 +4,10 @@
     "forwardPorts": [
         8000
     ],
-    "postCreateCommand": "make init",
+    "postCreateCommand": {
+        "Init environment": "make init",
+        "Fix Volume Permissions": "sudo chown -R $(whoami): /commandhistory"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -25,6 +28,13 @@
             ]
         }
     },
+    "mounts": [
+        "source=projectname-bashhistory,target=/commandhistory,type=volume"
+    ],
+    "runArgs": [
+        "--env-file",
+        ".env"
+    ],
     "features": {
         // "ghcr.io/tailscale/codespace/tailscale": {
         //     "version": "latest"

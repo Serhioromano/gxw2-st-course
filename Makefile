@@ -10,6 +10,11 @@ ts:
 
 init: gitc
 	@export $(grep -v '^#' .env | xargs)
+    @sudo mkdir /commandhistory
+    @sudo touch /commandhistory/.bash_history
+	@sudo chown -R $(whoami) /commandhistory
+	@SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=commandhistory/.bash_history"
+    @echo "$SNIPPET" >> "/home/$(whoami)/.bashrc"
 # 	@sudo tailscale up --reset --hostname=mkdocs --accept-routes
 	@echo "Start PIP configuration"
 	@pip install --upgrade pip
