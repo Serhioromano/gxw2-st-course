@@ -20,7 +20,8 @@
                 "ban.spellright",
                 "inu1255.easy-snippet",
                 "marp-team.marp-vscode",
-                "Perkovec.emoji"
+                "Perkovec.emoji",
+                "ms-vscode.vscode-speech"
             ]
         }
     },

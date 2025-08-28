@@ -11,6 +11,7 @@
         "ban.spellright",
         "inu1255.easy-snippet",
         "marp-team.marp-vscode",
-        "perkovec.emoji"
+        "perkovec.emoji",
+        "ms-vscode.vscode-speech"
     ]
 }

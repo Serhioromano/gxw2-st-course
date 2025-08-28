@@ -45,4 +45,5 @@
             "parser": "markdown"
         }
     },
+    "accessibility.voice.speechLanguage": "ru-RU",
 }
