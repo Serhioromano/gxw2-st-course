@@ -23,7 +23,9 @@
                 "inu1255.easy-snippet",
                 "marp-team.marp-vscode",
                 "Perkovec.emoji",
-                "ms-vscode.vscode-speech"
+                "ms-vscode.vscode-speech",
+                "Serhioromano.vscode-st",
+                "tamasfe.even-better-toml"
             ]
         }
     },

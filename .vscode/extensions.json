@@ -12,6 +12,8 @@
         "inu1255.easy-snippet",
         "marp-team.marp-vscode",
         "perkovec.emoji",
-        "ms-vscode.vscode-speech"
+        "ms-vscode.vscode-speech",
+        "serhioromano.vscode-st",
+        "tamasfe.even-better-toml"
     ]
 }

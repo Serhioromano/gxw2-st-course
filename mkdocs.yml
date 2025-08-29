@@ -17,6 +17,7 @@ nav:
     - Обзор ПЛК FX: 1-intro/fx-overview.md
     - Установка и настройка: 1-intro/gxw2-install.md
     - Интерфейс GX Works 2: 1-intro/gxw2-interface.md
+    - Настраиваем интерфейс: 1-intro/gxw2-twik-ui.md
   - 1. База:
     - Переменные: 2-basic/variables.md
     - Компиляция: 2-basic/compile.md
