@@ -1,4 +1,4 @@
-.PHONY: deploy init serve gitc ts
+.PHONY: deploy init serve gitc ts bashhist
 
 serve:
 	@echo "Starting the MkDocs server..."
@@ -8,14 +8,15 @@ ts:
 	@sudo tailscale login
 	@sudo tailscale up --reset --hostname=mkdocs --accept-routes
 
-init: gitc
+bashhist:
 	@export $(grep -v '^#' .env | xargs)
-    @sudo mkdir /commandhistory
-    @sudo touch /commandhistory/.bash_history
+	@sudo mkdir /commandhistory
+	@sudo touch /commandhistory/.bash_history
 	@sudo chown -R $(whoami) /commandhistory
 	@SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=commandhistory/.bash_history"
-    @echo "$SNIPPET" >> "/home/$(whoami)/.bashrc"
-# 	@sudo tailscale up --reset --hostname=mkdocs --accept-routes
+	@echo "$SNIPPET" >> "/home/$(whoami)/.bashrc"
+
+init: gitc
 	@echo "Start PIP configuration"
 	@pip install --upgrade pip
 	@pip3 install mkdocs
