@@ -4,6 +4,7 @@
     "forwardPorts": [
         8000
     ],
+    "postStartCommand": "make start",
     "postCreateCommand": {
         "Init environment": "make init",
         "Fix Volume Permissions": "sudo chown -R $(whoami): /commandhistory"
@@ -25,7 +26,8 @@
                 "Perkovec.emoji",
                 "ms-vscode.vscode-speech",
                 "Serhioromano.vscode-st",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "google.gemini-cli-vscode-ide-companion"
             ]
         }
     },

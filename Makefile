@@ -16,6 +16,10 @@ bashhist:
 	@SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=commandhistory/.bash_history"
 	@echo "$SNIPPET" >> "/home/$(whoami)/.bashrc"
 
+start:
+	@npm install -g @google/gemini-cli@latest
+	@gemini
+
 init: gitc
 	@echo "Start PIP configuration"
 	@pip install --upgrade pip
@@ -27,9 +31,9 @@ init: gitc
 	@echo "Configuration is done"
 
 gitc:
-	@git config pull.rebase false
-	@git config --global user.name "Serhioromano"
-	@git config --global user.email "Serhioromano@outlook.com"
+	git config pull.rebase false
+	git config --global user.name "Serhioromano"
+	git config --global user.email "Serhioromano@outlook.com"
 
 deploy:
 	@echo "Deploying the application..."
